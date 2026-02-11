@@ -1,0 +1,180 @@
+[0m19:04:00.490200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1520e23b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b152075bcb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b152291a1b0>]}
+
+
+============================== 19:04:00.492648 | 0135ab75-d9ba-4aba-9bf9-7b61809b8abb ==============================
+[0m19:04:00.492648 [info ] [MainThread]: Running with dbt=1.11.4
+[0m19:04:00.493115 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'partial_parse': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'profiles_dir': '/home/eric/.dbt', 'target_path': 'None', 'quiet': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'warn_error': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'fail_fast': 'False', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'version_check': 'True', 'empty': 'None', 'debug': 'False', 'invocation_command': 'dbt init'}
+[0m19:04:05.198714 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m19:04:05.203746 [info ] [MainThread]: 
+Your new dbt project "snowflake" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:04:05.204045 [info ] [MainThread]: Setting up your profile.
+[0m19:04:17.705241 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:04:17.705561 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:04:17.705760 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:05:55.746878 [info ] [MainThread]: Profile snowflake written to /home/eric/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:05:55.748925 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 124.34371, "process_in_blocks": "3720", "process_kernel_time": 0.247081, "process_mem_max_rss": "123596", "process_out_blocks": "80", "process_user_time": 0.965518}
+[0m19:05:55.749493 [debug] [MainThread]: Command `dbt init` succeeded at 19:05:55.749403 after 124.34 seconds
+[0m19:05:55.749757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1520e23b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b151e72a7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b151eae91f0>]}
+[0m19:05:55.750018 [debug] [MainThread]: Flushing usage events
+[0m19:05:56.581089 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:23:28.142267 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:23:28.148963 | 83669872-a415-47f2-845e-5b38001459d3 ==============================
+[0m20:23:28.148963 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:23:28.149371 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'introspect': 'True', 'profiles_dir': '/home/eric/.dbt', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt init', 'empty': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'write_json': 'True', 'log_path': 'logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'no_print': 'None', 'printer_width': '80', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m20:23:50.727534 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:23:50.736756 [info ] [MainThread]: 
+Your new dbt project "qs_snowflake" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:23:50.737059 [info ] [MainThread]: Setting up your profile.
+[0m20:23:56.310556 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:23:56.310978 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:23:56.311189 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:25:50.268422 [info ] [MainThread]: Profile qs_snowflake written to /home/eric/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:25:50.269985 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 156.84874, "process_in_blocks": "95640", "process_kernel_time": 0.254015, "process_mem_max_rss": "123444", "process_out_blocks": "96", "process_user_time": 1.038809}
+[0m20:25:50.270552 [debug] [MainThread]: Command `dbt init` succeeded at 20:25:50.270474 after 156.85 seconds
+[0m20:25:50.270784 [debug] [MainThread]: Flushing usage events
+[0m20:37:30.689243 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:37:30.694023 | 7942dc39-4cdf-4fa9-b736-7db9f9324b6c ==============================
+[0m20:37:30.694023 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:37:30.694442 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'profiles_dir': '/home/eric/.dbt', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'use_colors': 'True', 'empty': 'None', 'log_path': 'logs', 'partial_parse': 'True', 'printer_width': '80', 'no_print': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'quiet': 'False', 'debug': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt init jaffle_shop', 'fail_fast': 'False'}
+[0m20:37:30.701207 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:37:30.711421 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:37:30.711761 [info ] [MainThread]: Setting up your profile.
+[0m20:37:33.491172 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:37:33.491544 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:37:33.491772 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:40:32.676563 [error] [MainThread]: Encountered an error:
+
+[0m20:40:32.679309 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m20:40:32.680333 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 199.58296, "process_in_blocks": "1584", "process_kernel_time": 0.202557, "process_mem_max_rss": "123756", "process_out_blocks": "80", "process_user_time": 1.003374}
+[0m20:40:32.680901 [debug] [MainThread]: Command `dbt init` failed at 20:40:32.680827 after 199.58 seconds
+[0m20:40:32.681173 [debug] [MainThread]: Flushing usage events
+[0m20:40:35.776172 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:40:35.780057 | 58f09dee-0084-47c8-aabc-85160808c08b ==============================
+[0m20:40:35.780057 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:40:35.780470 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'version_check': 'True', 'printer_width': '80', 'introspect': 'True', 'target_path': 'None', 'debug': 'False', 'profiles_dir': '/home/eric/.dbt', 'log_format': 'default', 'empty': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'invocation_command': 'dbt init jaffle_shop', 'warn_error': 'None', 'use_colors': 'True', 'log_path': 'logs', 'fail_fast': 'False'}
+[0m20:40:35.786330 [info ] [MainThread]: A project called jaffle_shop already exists here.
+[0m20:40:35.787032 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.05331161, "process_in_blocks": "0", "process_kernel_time": 0.189529, "process_mem_max_rss": "99592", "process_out_blocks": "0", "process_user_time": 0.852883}
+[0m20:40:35.787321 [debug] [MainThread]: Command `dbt init` succeeded at 20:40:35.787256 after 0.05 seconds
+[0m20:40:35.787538 [debug] [MainThread]: Flushing usage events
+[0m20:41:00.762152 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:41:00.766046 | 76d5c812-ff0d-4602-8b31-47a074343618 ==============================
+[0m20:41:00.766046 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:41:00.766451 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'fail_fast': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'profiles_dir': '/home/eric/.dbt', 'use_colors': 'True', 'log_path': 'logs', 'indirect_selection': 'eager', 'log_format': 'default', 'warn_error': 'None', 'partial_parse': 'True', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'introspect': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init jaffle_shop', 'static_parser': 'True'}
+[0m20:41:00.772332 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:41:00.777316 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:41:00.777601 [info ] [MainThread]: Setting up your profile.
+[0m20:41:02.403817 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:41:02.404154 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:41:02.404418 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:43:36.295703 [info ] [MainThread]: Profile jaffle_shop written to /home/eric/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:43:36.296653 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 170.24402, "process_in_blocks": "0", "process_kernel_time": 0.168517, "process_mem_max_rss": "123776", "process_out_blocks": "88", "process_user_time": 1.022098}
+[0m20:43:36.297238 [debug] [MainThread]: Command `dbt init` succeeded at 20:43:36.297146 after 170.24 seconds
+[0m20:43:36.297546 [debug] [MainThread]: Flushing usage events
+[0m20:49:31.397339 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:49:31.402880 | f9e11261-513c-4ed1-b5a9-7948fc3172a9 ==============================
+[0m20:49:31.402880 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:49:31.403302 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'partial_parse': 'True', 'quiet': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'empty': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'profiles_dir': '/home/eric/.dbt', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'introspect': 'True', 'static_parser': 'True', 'printer_width': '80', 'version_check': 'True'}
+[0m20:49:31.403643 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/eric/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:49:31.404833 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.05353095, "process_in_blocks": "65144", "process_kernel_time": 0.243489, "process_mem_max_rss": "99116", "process_out_blocks": "8", "process_user_time": 0.901275}
+[0m20:49:31.405176 [debug] [MainThread]: Command `dbt run` failed at 20:49:31.405096 after 0.05 seconds
+[0m20:49:31.405388 [debug] [MainThread]: Flushing usage events
