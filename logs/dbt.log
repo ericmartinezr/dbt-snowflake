@@ -164,3 +164,17 @@ Happy modeling!
 [0m20:43:36.296653 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 170.24402, "process_in_blocks": "0", "process_kernel_time": 0.168517, "process_mem_max_rss": "123776", "process_out_blocks": "88", "process_user_time": 1.022098}
 [0m20:43:36.297238 [debug] [MainThread]: Command `dbt init` succeeded at 20:43:36.297146 after 170.24 seconds
 [0m20:43:36.297546 [debug] [MainThread]: Flushing usage events
+[0m20:49:31.397339 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:49:31.402880 | f9e11261-513c-4ed1-b5a9-7948fc3172a9 ==============================
+[0m20:49:31.402880 [info ] [MainThread]: Running with dbt=1.11.4
+[0m20:49:31.403302 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'partial_parse': 'True', 'quiet': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'empty': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'profiles_dir': '/home/eric/.dbt', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'introspect': 'True', 'static_parser': 'True', 'printer_width': '80', 'version_check': 'True'}
+[0m20:49:31.403643 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/eric/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:49:31.404833 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.05353095, "process_in_blocks": "65144", "process_kernel_time": 0.243489, "process_mem_max_rss": "99116", "process_out_blocks": "8", "process_user_time": 0.901275}
+[0m20:49:31.405176 [debug] [MainThread]: Command `dbt run` failed at 20:49:31.405096 after 0.05 seconds
+[0m20:49:31.405388 [debug] [MainThread]: Flushing usage events
