@@ -178,3 +178,134 @@ Runtime Error
 [0m20:49:31.404833 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.05353095, "process_in_blocks": "65144", "process_kernel_time": 0.243489, "process_mem_max_rss": "99116", "process_out_blocks": "8", "process_user_time": 0.901275}
 [0m20:49:31.405176 [debug] [MainThread]: Command `dbt run` failed at 20:49:31.405096 after 0.05 seconds
 [0m20:49:31.405388 [debug] [MainThread]: Flushing usage events
+[0m18:24:51.161802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc0d2540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc1848f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc4016d0>]}
+
+
+============================== 18:24:51.165976 | fd010d75-5794-42d0-84c5-96e1540be461 ==============================
+[0m18:24:51.165976 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:24:51.166381 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init linkup-raw-sample-data', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'profiles_dir': '/home/eric/.dbt', 'target_path': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'no_print': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'empty': 'None', 'cache_selected_only': 'False', 'log_path': 'logs', 'debug': 'False', 'write_json': 'True', 'introspect': 'True'}
+[0m18:24:59.487860 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:24:59.496507 [info ] [MainThread]: 
+Your new dbt project "linkup_raw_data" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:24:59.496890 [info ] [MainThread]: Setting up your profile.
+[0m18:25:02.374511 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:25:02.374995 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:25:02.375266 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:26:26.293826 [error] [MainThread]: Encountered an error:
+
+[0m18:26:26.297688 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:26:26.299009 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 101.08278, "process_in_blocks": "93464", "process_kernel_time": 0.353902, "process_mem_max_rss": "123192", "process_out_blocks": "88", "process_user_time": 1.106343}
+[0m18:26:26.299613 [debug] [MainThread]: Command `dbt init` failed at 18:26:26.299498 after 101.08 seconds
+[0m18:26:26.299897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbb839490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cba037ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cba6535c0>]}
+[0m18:26:26.300172 [debug] [MainThread]: Flushing usage events
+[0m18:26:29.697514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2cad3e870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2cca46c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2cb338d40>]}
+
+
+============================== 18:26:29.700713 | 0fa6065c-a3ec-4a72-af73-63b498acd9c6 ==============================
+[0m18:26:29.700713 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:26:29.701110 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'log_format': 'default', 'version_check': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'profiles_dir': '/home/eric/.dbt', 'use_experimental_parser': 'False', 'quiet': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'empty': 'None', 'write_json': 'True', 'invocation_command': 'dbt init linkup-raw-sample-data', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'introspect': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'partial_parse': 'True', 'printer_width': '80', 'no_print': 'None', 'fail_fast': 'False'}
+[0m18:26:36.559824 [info ] [MainThread]: A project called linkup_raw_data already exists here.
+[0m18:26:36.560810 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 6.907657, "process_in_blocks": "54056", "process_kernel_time": 0.2234, "process_mem_max_rss": "99400", "process_out_blocks": "0", "process_user_time": 0.919482}
+[0m18:26:36.561153 [debug] [MainThread]: Command `dbt init` succeeded at 18:26:36.561085 after 6.91 seconds
+[0m18:26:36.561405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ca5398e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ca942d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ca943620>]}
+[0m18:26:36.561666 [debug] [MainThread]: Flushing usage events
+[0m18:26:37.252176 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:26:53.244747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5bf2ce7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5bf37c8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5c0ebfda0>]}
+
+
+============================== 18:26:53.246972 | f22dedaa-3f60-4682-af2d-fe8cbd77d98c ==============================
+[0m18:26:53.246972 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:26:53.247360 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'fail_fast': 'False', 'introspect': 'True', 'no_print': 'None', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'log_format': 'default', 'printer_width': '80', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'invocation_command': 'dbt init linkup-raw-sample-data', 'write_json': 'True', 'partial_parse': 'True', 'profiles_dir': '/home/eric/.dbt', 'static_parser': 'True', 'empty': 'None'}
+[0m18:26:56.989040 [debug] [MainThread]: Starter project path: /home/eric/dbt/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:26:56.997793 [info ] [MainThread]: 
+Your new dbt project "linkup_raw_data" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:26:56.998127 [info ] [MainThread]: Setting up your profile.
+[0m18:26:58.602644 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:26:58.603073 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:26:58.603299 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:27:50.098613 [info ] [MainThread]: Profile linkup_raw_data written to /home/eric/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:27:50.100064 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 60.78311, "process_in_blocks": "16400", "process_kernel_time": 0.211628, "process_mem_max_rss": "123316", "process_out_blocks": "88", "process_user_time": 0.990119}
+[0m18:27:50.100623 [debug] [MainThread]: Command `dbt init` succeeded at 18:27:50.100545 after 60.78 seconds
+[0m18:27:50.100884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5bebaa4b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5bd5f2480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70d5bd500f50>]}
+[0m18:27:50.101228 [debug] [MainThread]: Flushing usage events
+[0m18:27:50.856649 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:27:55.623619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40f07d6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40e9d6270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40ebcc2c0>]}
+
+
+============================== 18:27:55.626917 | 0b82088e-078b-432d-8289-44cb61942414 ==============================
+[0m18:27:55.626917 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:27:55.627313 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'version_check': 'True', 'log_path': 'logs', 'printer_width': '80', 'write_json': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'profiles_dir': '/home/eric/.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'empty': 'None', 'use_colors': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:27:55.643701 [info ] [MainThread]: dbt version: 1.11.4
+[0m18:27:55.644007 [info ] [MainThread]: python version: 3.12.3
+[0m18:27:55.644444 [info ] [MainThread]: python path: /home/eric/dbt/.venv/bin/python3
+[0m18:27:55.644767 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m18:27:55.934334 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:27:55.934761 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:27:55.934979 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:27:55.987851 [info ] [MainThread]: Using profiles dir at /home/eric/.dbt
+[0m18:27:55.988452 [info ] [MainThread]: Using profiles.yml file at /home/eric/.dbt/profiles.yml
+[0m18:27:55.988739 [info ] [MainThread]: Using dbt_project.yml file at /home/eric/dbt/dbt_project.yml
+[0m18:27:55.989036 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m18:27:55.989662 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.40897408, "process_in_blocks": "70416", "process_kernel_time": 0.285395, "process_mem_max_rss": "124264", "process_out_blocks": "8", "process_user_time": 1.058969}
+[0m18:27:55.990087 [debug] [MainThread]: Command `dbt debug` failed at 18:27:55.990021 after 0.41 seconds
+[0m18:27:55.990316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40e6f6b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40cb7a480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40cb195b0>]}
+[0m18:27:55.990564 [debug] [MainThread]: Flushing usage events
+[0m18:27:56.608500 [debug] [MainThread]: An error was encountered while trying to flush usage events

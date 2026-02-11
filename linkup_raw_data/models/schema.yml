@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: jobs
+    columns:
+      - name: country
+        data_tests:
+          - not_null
+
+  - name: stg_jobs_descriptions
+    description: This model cleans up jobs descriptions
+    columns:
+      - name: job_id
+        description: Primary key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_jobs_records
+    description: This model cleans up jobs records
+    columns:
+      - name: job_id
+        description: Primary key
+        data_tests:
+          - unique
+          - not_null
