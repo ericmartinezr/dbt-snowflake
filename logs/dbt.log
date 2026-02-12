@@ -178,6 +178,7 @@ Runtime Error
 [0m20:49:31.404833 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.05353095, "process_in_blocks": "65144", "process_kernel_time": 0.243489, "process_mem_max_rss": "99116", "process_out_blocks": "8", "process_user_time": 0.901275}
 [0m20:49:31.405176 [debug] [MainThread]: Command `dbt run` failed at 20:49:31.405096 after 0.05 seconds
 [0m20:49:31.405388 [debug] [MainThread]: Flushing usage events
+<<<<<<< HEAD
 [0m18:24:51.161802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc0d2540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc1848f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x755cbc4016d0>]}
 
 
@@ -309,3 +310,5 @@ Internal Error
 [0m18:27:55.990316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40e6f6b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40cb7a480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da40cb195b0>]}
 [0m18:27:55.990564 [debug] [MainThread]: Flushing usage events
 [0m18:27:56.608500 [debug] [MainThread]: An error was encountered while trying to flush usage events
+=======
+>>>>>>> dev
