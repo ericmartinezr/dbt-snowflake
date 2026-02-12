@@ -1,21 +1,27 @@
-Welcome to your new dbt project!
+# LinkUp Raw Data
 
-### Using the starter project
+Este proyecto dbt gestiona la ingestión y transformación inicial de datos crudos "LinkUp". El objetivo es preparar estos datos para su uso en análisis posteriores, siguiendo las mejores prácticas de modelado de datos.
 
-Try running the following commands:
+## Estructura del Proyecto
 
-- dbt run
-- dbt test
+El proyecto sigue una arquitectura de capas ("layers") para organizar las transformaciones:
 
-### Resources:
+### 1. Staging (`models/staging`)
+- **Propósito:** Limpieza inicial y estandarización de tipos de datos.
+- **Materialización:** Vistas (`view`).
+- **Fuente:** Datos crudos cargados en Snowflake.
 
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### 2. Intermediate (`models/int`)
+- **Propósito:** Transformaciones complejas, cruces (joins) y lógica de negocio intermedia que no es el resultado final pero es necesaria para los marts.
+- **Materialización:** Vistas (`view`).
 
----
+### 3. Marts (`models/marts`)
+- **Propósito:** Tablas finales listas para el consumo de analistas y herramientas de BI.
+- **Materialización:** Tablas (`table`).
+
+## Ejecución
+
+Para crear la DB
 
 Crear DB
 
@@ -23,13 +29,14 @@ Crear DB
 CREATE DATABASE LINKUP_DB;
 CREATE SCHEMA LINKUP_SCHEMA;
 
-grant all on database LINKUP_DB to role ACCOUNTADMIN;
-grant all on schema LINKUP_SCHEMA to role ACCOUNTADMIN;
-grant all on all tables in database LINKUP_DB to role ACCOUNTADMIN;
-grant all on future tables in database LINKUP_DB to role ACCOUNTADMIN;
+GRANT ALL ON DATABASE LINKUP_DB TO ROLE ACCOUNTADMIN;
+GRANT ALL ON SCHEMA LINKUP_SCHEMA TO ROLE ACCOUNTADMIN;
+GRANT ALL ON ALL TABLES IN DATABASE LINKUP_DB TO ROLE ACCOUNTADMIN;
+GRANT ALL ON FUTURE TABLES IN DATABASE LINKUP_DB TO ROLE ACCOUNTADMIN;
 ```
 
-Orden de ejecucion
+Para procesar los datos de este proyecto:
 
-- dbt run (para que las vistas/tablas/etc se materialicen)
-- dbt test (con los objetos materializados recien podemos testearlos)
+```bash
+dbt run --select linkup_raw_data
+```

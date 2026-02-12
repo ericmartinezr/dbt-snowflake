@@ -1,15 +1,18 @@
-Welcome to your new dbt project!
+# Jaffle Shop
 
-### Using the starter project
+Este es un proyecto de demostración para **dbt (data build tool)**, diseñado para mostrar cómo construir un almacén de datos (data warehouse) moderno utilizando dbt y Snowflake.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Descripción del Proyecto
 
+`jaffle_shop` simula una tienda online que vende "jaffles" (sándwiches tostados). El proyecto transforma datos crudos de clientes y pedidos en modelos analíticos dimensionales.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Modelos Principales
+
+- **stg_customers**: Vista de staging que limpia los datos crudos de clientes.
+- **stg_orders**: Vista de staging que limpia los datos crudos de pedidos.
+- **customers**: Tabla dimensional que enriquece la información de los clientes con métricas agregadas de sus pedidos (primera fecha de compra, última fecha de compra, número total de pedidos).
+
+## Cómo ejecutar este proyecto
+
+1. **Ejecutar modelos:** `dbt run`
+2. **Probar datos:** `dbt test`
