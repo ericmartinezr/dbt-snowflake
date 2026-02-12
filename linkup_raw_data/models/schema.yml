@@ -1,9 +1,39 @@
 version: 2
 
 models:
-  - name: jobs
+  - name: fct_jobs
+    description: This model aggregates jobs data by company and country, providing insights into the total number of jobs and total days active for each combination of company and country on a monthly basis.
     columns:
+      - name: company_name
+        description: Company name.
+        data_tests:
+          - not_null
       - name: country
+        description: The country where the job is located.
+        data_tests:
+          - not_null
+      - name: year
+        description: The year when the job was created.
+        data_tests:
+          - not_null
+      - name: month
+        description: The month when the job was created.
+        data_tests:
+          - not_null
+      - name: total_jobs
+        description: The total number of jobs for each company and country combination in a given month.
+      - name: total_days_jobs_active
+        description: The total number of days that jobs were active for each company and country combination in a given month.
+
+  - name: int_jobs
+    description: This model integrates data from the raw jobs table and performs initial transformations to clean and standardize the data for further analysis.
+    columns:
+      - name: company_id
+        description: The unique identifier for each company.
+        data_tests:
+          - not_null
+      - name: country
+        description: The country where the job is located.
         data_tests:
           - not_null
 
@@ -11,7 +41,7 @@ models:
     description: This model cleans up jobs descriptions
     columns:
       - name: job_id
-        description: Primary key
+        description: The unique hash identifier for each job
         data_tests:
           - unique
           - not_null
@@ -20,7 +50,7 @@ models:
     description: This model cleans up jobs records
     columns:
       - name: job_id
-        description: Primary key
+        description: The unique hash identifier for each job
         data_tests:
           - unique
           - not_null

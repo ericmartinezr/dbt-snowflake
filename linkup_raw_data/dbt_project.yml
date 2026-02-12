@@ -30,6 +30,8 @@ clean-targets: # directories to be removed by `dbt clean`
 models:
   linkup_raw_data:
     # Config indicated by + and applies to all files under models/example/
+    marts:
+      +materialized: table
     int:
       +materialized: view
     staging:
